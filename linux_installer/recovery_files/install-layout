@@ -1,0 +1,7 @@
+# Partition layout (MBR and EBRs)
+
+fatload usb 0:1 0x08000000 recovery_files/mbr.bin.gz
+unzip 0x08000000 0x10000000 0x00000200
+mmc write 0x10000000 0x00000000 0x00000001
+echo
+
